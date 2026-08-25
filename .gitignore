@@ -22,7 +22,7 @@ eggs/
 
 # IDEs & Editors
 # VS Code settings (machine-specific)
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

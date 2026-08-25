@@ -1,0 +1,50 @@
+# Python & Environment
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+devel/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# IDEs & Editors
+# VS Code settings (machine-specific)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# PyCharm / JetBrains
+.idea/
+
+# macOS / OS generated files
+.DS_Store
+Thumbs.db
+
+
+# Data & Models (SentinelML Specific)
+# Ignore large raw data files (keep raw folder tracked via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+
+# Environment variables / API Keys
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*.log

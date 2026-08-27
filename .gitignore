@@ -5,6 +5,8 @@ venv/
 ENV/
 env/
 
+models/*.joblib, models/*.pkl
+
 # Python bytecode / cache
 __pycache__/
 *.py[cod]
@@ -23,9 +25,6 @@ eggs/
 # IDEs & Editors
 # VS Code settings (machine-specific)
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
 
 # PyCharm / JetBrains
 .idea/
@@ -38,7 +37,6 @@ Thumbs.db
 # Data & Models (SentinelML Specific)
 # Ignore large raw data files (keep raw folder tracked via .gitkeep)
 data/raw/*
-!data/raw/.gitkeep
 
 # Environment variables / API Keys
 .env

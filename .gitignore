@@ -1,48 +1,166 @@
-# Python & Environment
-# Virtual environments
+# ============================================================
+# PULSE - Git Ignore
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Python & Virtual Environments
+# ------------------------------------------------------------
+
 .venv/
 venv/
 ENV/
 env/
 
-models/*.joblib, models/*.pkl
-
-# Python bytecode / cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
+
+# ------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+
+credentials.json
+secrets.json
+
+
+# ------------------------------------------------------------
+# Build / Packaging
+# ------------------------------------------------------------
+
 build/
-devel/
 dist/
+devel/
 downloads/
 eggs/
 .eggs/
 *.egg-info/
 *.egg
 
-# IDEs & Editors
-# VS Code settings (machine-specific)
-.vscode/
+*.whl
 
-# PyCharm / JetBrains
+
+# ------------------------------------------------------------
+# IDEs & Editors
+# ------------------------------------------------------------
+
+.vscode/
 .idea/
 
-# macOS / OS generated files
+*.swp
+*.swo
+
+
+# ------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------
+
 .DS_Store
 Thumbs.db
+desktop.ini
 
 
-# Data & Models (SentinelML Specific)
-# Ignore large raw data files (keep raw folder tracked via .gitkeep)
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+
+.ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+logs/
+
+
+# ------------------------------------------------------------
+# Temporary / Cache Files
+# ------------------------------------------------------------
+
+*.tmp
+*.temp
+*.cache
+
+.cache/
+temp/
+tmp/
+
+
+# ------------------------------------------------------------
+# Local Databases
+# ------------------------------------------------------------
+
+*.db
+*.sqlite
+*.sqlite3
+
+
+# ------------------------------------------------------------
+# Local Data
+# ------------------------------------------------------------
+
+# Ignore raw/private datasets
 data/raw/*
 
-# Environment variables / API Keys
-.env
+# Keep the directory itself in Git
+!data/raw/.gitkeep
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
+# Ignore locally generated/processed data
+data/processed/*
 
-# Logs
-*.log
+# Keep the directory itself in Git
+!data/processed/.gitkeep
+
+
+# ------------------------------------------------------------
+# Model Experiment Files
+# ------------------------------------------------------------
+
+# Experimental/generated model files
+models/experiments/
+
+# Training checkpoints
+models/checkpoints/
+
+# TensorFlow / Keras checkpoints
+*.ckpt
+*.h5
+
+# PyTorch checkpoints
+*.pt
+
+# TensorBoard
+runs/
+tensorboard/
+
+
+# ------------------------------------------------------------
+# Test / Coverage
+# ------------------------------------------------------------
+
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+.tox/
+.nox/
+
+
+# ------------------------------------------------------------
+# Project-Specific Temporary Files
+# ------------------------------------------------------------
+
+*.bak
+*.old
+*.orig

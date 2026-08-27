@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.ensemble import IsolationForest
+import joblib
 
 # Using simple relative paths
 INPUT_DATA = "D:/Desktop/sentinelml/data/processed/processed_features.csv"
@@ -40,6 +41,11 @@ def train_and_score():
     print(f"Success! Evaluated {total_rows} records.")
     print(f"The model flagged {anomalies_count} potential anomalies.")
     print(f"Scored data saved to: {OUTPUT_DATA}")
+    
+    print(f"Saving trained model artifact to {"models/isolation_forest.joblib"}...")
+    joblib.dump(model, "models/isolation_forest.joblib")
+    
+    print("Saving scored data...")
 
 if __name__ == "__main__":
     train_and_score()
